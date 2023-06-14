@@ -37,6 +37,10 @@ img, picture, video, canvas, svg {
   p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
   }
+
+body {
+    background: #DBB68F;
+}
   
 /* header section */
 
@@ -79,6 +83,7 @@ img {
     margin-right: 2em;
     height: 35px;
     width: 35px;
+    cursor: pointer;
 
 }
 
@@ -93,18 +98,39 @@ img {
 
   /* Payment Modal */
 
-  .hidden {
-    display: none;
-  }
-
-  .payment-modal {
-
+.modal-section, .payment-modal {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    background: white;
+}
 
-  }
+
+.modal-section {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    
+    
+
+}
+
+.hidden {
+    display: none;
+}
+
+.payment-modal {
+    
+    flex-direction: column;
+    justify-content: space-around;
+    background: white;
+    height: 300px;
+    width: 300px;
+    background: #DBDBDB;
+
+}
 
   /* media queries */
 
