@@ -2,154 +2,294 @@
 /*
   1. Use a more-intuitive box-sizing model.
 */
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  /*
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
     2. Remove default margin
   */
-  * {
-    margin: 0;
-  }
-  /*
+* {
+  margin: 0;
+}
+/*
     3. Allow percentage-based heights in the application
   */
-  html, body {
-    height: 100%;
-  }
+html,
+body {
+  height: 100%;
+}
 
-  /*
+/*
   6. Improve media defaults
 */
-img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  /*
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
     7. Remove built-in form typography styles
   */
-  input, button, textarea, select {
-    font: inherit;
-  }
-  /*
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
     8. Avoid text overflows
   */
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
 
 body {
-    background: #DBB68F;
+  background: #dbb68f;
+  font-family: "Montserrat", sans-serif;
+  height: 1000px;
 }
-  
+
 /* header section */
 
 header {
-    background-image: url(images/bg\ img.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 200px;
-    width: 100%;
-    
-
+  background-image: url(images/bg\ img.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 100px;
 }
 
 .header-content {
-    color: whitesmoke;
-    padding: 1em 2em;
-    text-shadow: 2px 2px 5px black;
+  color: whitesmoke;
+  padding: 1em 2em;
+  text-shadow: 2px 2px 5px black;
 }
-
 
 /* display food section */
 
-.food-section {
+#display-food {
+  margin: 0;
+}
 
-    display: flex;
-    align-items: center;
-    
-    
+.food-section {
+  display: flex;
+  align-items: center;
+  margin: 1em auto;
+  max-width: 750px;
+  
 }
 
 .food-emoji {
-    height: 20px;
-    width: 20px;
-    margin-right: 1em;
-    margin-left: 2em;
+  height: 20px;
+  width: 20px;
+  margin-right: 1em;
+  margin-left: 2em;
 }
 
 img {
-    margin-left: auto;
-    margin-right: 2em;
-    height: 35px;
-    width: 35px;
-    cursor: pointer;
-
+  margin-left: auto;
+  margin-right: 2em;
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
 }
 
+hr {
+  width: 85%;
+  margin: 0 auto;
+  max-width: 637px;
+}
 .remove-item {
-    cursor: pointer;
-    
+  cursor: pointer;
 }
 
 .remove-item:hover {
-    color: red;
+  color: red;
 }
 
-  /* Payment Modal */
-
-.modal-section, .payment-modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Your order section showing food added and the order total */
+.order-title {
+  text-align: center;
+  margin: 2em 0;
 }
 
+#display-order-total {
+  display: flex;
+  flex-direction: column;
+  max-width: 750px;
+  margin: 1em auto;
+}
+
+.individual-food-item {
+  display: flex;
+  margin: .5em 0;
+}
+
+.remove-item {
+  font-size: .7rem;
+  margin-left: 1em;
+}
+
+.food-price, 
+.total-food-price {
+  margin-left: auto;
+  margin-right: 2em;
+}
+
+.total-price-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-container {
+  display: flex;
+  margin: 1em 0;
+}
+
+.individual-food-item, 
+.price-container {
+  max-width: 80%px;
+  margin-left: 1em;
+  align-items: center;
+}
+
+.order-btn, 
+.pay-btn {
+  margin: 0 auto;
+  padding: 15px 100px;
+  border: none;
+  border-radius: 5px;
+  background: #16DB99;
+  color: white;
+  
+}
+
+/* Payment Modal */
+.cvvNumber, 
+.cardNumber,
+.pay-btn {
+  width: 70%;
+}
+
+.modal-section,
+.payment-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .modal-section {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    
-    
-
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .payment-modal {
-    
-    flex-direction: column;
-    justify-content: space-around;
-    background: white;
-    height: 300px;
-    width: 300px;
-    background: #DBDBDB;
+  flex-direction: column;
+  justify-content: space-around;
+  background: white;
+  height: 300px;
+  width: 300px;
+  background: #dbdbdb;
+}
+
+
+/* disply the confirmation message after completing order */
+
+#display-order-confirmation {
+  height: 75px;
+  max-width: 504px;
+  margin: 2em auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  
+}
+
+.confirmation-color {
+  background: #c9f1df;
+  color: #065F46;
+  font-weight: 600;
+  
+}
+
+.pay-btn {
+  padding: 10px 70px;
+}
+/* media queries */
+
+@media (max-width: 400px) {
+  .header-content {
+    padding: 0.25em 0.75em;
+  }
+
+  .food-info {
+    font-size: .78rem;
+  }
+
+  img {
+    height: 25px;
+    width: 25px;
+  }
+
+  .order-btn {
+    width: 90%;
+  }
 
 }
 
-  /* media queries */
+@media (max-width: 600px){
+  #display-order-confirmation {
+    width: 80%;
+    text-align: center;
+  }
 
-@media (max-width: 374px) {
-    .header-content {
-        padding: .25em .75em;
-    }
+  body {
+    height: 700px;
+  }
 }
 
 @media (min-width: 601px) {
-    
-    header {
-        background-size: 100%;
-        height: 300px;
-    }
+  header {
+    background-size: 100%;
+    height: 167px;
+  }
+  
+  .header-content {
+    padding: 3em 6em;
+  }
 
+}
+@media (min-width: 1000px) {
+  header {
+    background-size: 100%;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
   }
 
-
-
-  
+  .header-content {
+    text-align: center;
+    
+  }
+}

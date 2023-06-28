@@ -1,59 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- CSS stylesheet link -->
 
-    <link rel="stylesheet" href="style.css">
-
-
-    <!-- Font Awesome CDN -->
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- uuid CDN (not using on this file currently)  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="style.css" />
 
     <title>Restaurant Ordering App</title>
-</head>
-<body>
+  </head>
 
+  <body>
     <header class="header">
-        <div class="header-content">
-            <h1>Silent's Diner</h1>
-            <p>The best comfort food in town.</p>
-        </div>
+      <div class="header-content">
+        <h1>Silent's Diner</h1>
+        <p>The best comfort food in town.</p>
+      </div>
     </header>
 
-    <section id="display-food">
+    <section id="display-food"></section>
 
-    </section>
+    <section id="display-order-total"></section>
 
-    <section id="display-order-total">
-
-    </section>
+    <section id="display-order-confirmation" ></section>
 
     <div class="modal-section hidden" id="modal-section">
-        <form class="payment-modal" id="payment-modal" action="">
-            
-            <h2>Enter card details</h2>
-            <input type="text" class="paymentName" id="paymentName" name="paymentName" placeholder="Enter your name" required>
-            <input type="number" class="cardNumber" id="cardNumber" name="cardNumber" placeholder="Enter your card number" required>
-            <input type="number" class="cvvNumber" id="cvvNumber" name="cvvNumber" placeholder="Enter CVV" required>
-            <button type="submit" class="pay-btn" id="pay-btn">Pay</button>
-
-        </form>
+      <form class="payment-modal" id="payment-modal" action="">
+        <h2>Enter card details</h2>
+        <input
+          type="text"
+          class="paymentName"
+          id="paymentName"
+          name="paymentName"
+          placeholder="Enter your name"
+          required
+        />
+        <input
+          type="number"
+          class="cardNumber"
+          id="cardNumber"
+          name="cardNumber"
+          placeholder="Enter your card number"
+          required
+        />
+        <input
+          type="number"
+          class="cvvNumber"
+          id="cvvNumber"
+          name="cvvNumber"
+          placeholder="Enter CVV"
+          required
+        />
+        <button type="submit" class="pay-btn" id="pay-btn">Pay</button>
+      </form>
     </div>
 
-    
-
-    <script src="main.js" type="module">
-         
-    </script>
-</body>
+    <script src="main.js" type="module"></script>
+  </body>
 </html>
